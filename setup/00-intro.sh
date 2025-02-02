@@ -78,7 +78,7 @@ HYPERSCALER=$(gum choose "google" "aws" "azure")
 
 echo "export HYPERSCALER=$HYPERSCALER" >> .env
 
-if [[ "$HYPERSCALER" == "google" ]]; then
+: 'if [[ "$HYPERSCALER" == "google" ]]; then
 
     gcloud auth login
 
@@ -232,7 +232,7 @@ spec:
     | tee examples/azure-intro.yaml
 
 fi
-
+'
 kubectl create namespace a-team
 
 ###########
